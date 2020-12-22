@@ -1,0 +1,25 @@
+/* ======================== Định nghĩa các style nhỏ ======================== */
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden-link {
+    text-decoration: none;
+    color: white;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.jusify-between {
+    justify-content: space-between;
+}
