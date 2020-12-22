@@ -25,11 +25,10 @@ html {
 
 /* ======================== Navigation ======================== */
 
-#navigation {
+nav {
     position: sticky;
     top: 0px;
     z-index: 1000;
-    /* width: 100%; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,7 +36,7 @@ html {
     /* padding: 5px 50px; */
 }
 
-#logo {
+.logo {
     display: block;
     /* width: 100px; */
     height: 80px;
@@ -46,73 +45,67 @@ html {
     margin: 5px 10px;
 }
 
-nav {
+#navigation {
     display: flex;
     align-items: center;
 }
 
-nav ul {
+#nav-menu {
     display: flex;
     align-items: center;
     list-style-type: none;
     /* background-color: blue; */
 }
 
-nav ul li {
+#nav-menu li {
     list-style-type: none;
     /* margin: 10px; */
     padding: 10px 20px;
     /* background-color: azure; */
 }
 
-nav ul li a {
+#nav-menu li a {
     text-decoration: none;
     color: var(--second-color);
     font-size: 1.1em;
     /* font-weight: bold; */
 }
 
-nav ul li a:hover {
+#nav-menu li a:hover {
     color: var(--main-color);
 }
 
-#contain-search {
-    margin: 0px 10px;
-}
-
-#account-zone {
-    margin: 10px;
+.menu-active {
+    color: var(--main-color) !important;
 }
 
 
 /* ======================== Search bar ======================== */
 
-
-/* // Main styles */
-
 #contain-search {
     position: relative;
-    width: 20rem;
+    width: 18rem;
     background: var(--main-color);
     border-radius: var(--rad);
+    margin: 0px 10px;
 }
 
 #search,
 #btn-search {
     height: var(--height-searchbar);
-    font-family: var(--font-fam);
+    /* font-family: var(--font-fam); */
     border: 0;
     color: var(--second-color);
     font-size: 1.1rem;
 }
 
-#search[type="search"] {
+#search {
     outline: 0;
     width: 100%;
     background: #D6D6D6;
     padding: 0 1.6rem;
     border-radius: var(--rad);
-    appearance: none;
+    /* appearance: none; */
     transition: all var(--dur) var(--bez);
     transition-property: width, border-radius;
     z-index: 1;
@@ -145,42 +138,8 @@ nav ul li a:hover {
 
 /* ======================== Account zone ======================== */
 
-
-/* Dropdown Button */
-
-.dropbtn {
-    /* background-color: #3498DB; */
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropbtn:hover,
-.dropbtn:focus {
-    background-color: #2980B9;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 10px;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
-    z-index: 1;
-    border: 0;
-}
-
-#accountDropdown {
-    background-color: var(--main-color);
-    color: white;
+#account-zone {
+    margin: 10px;
 }
 
 .account-btn {
@@ -191,7 +150,23 @@ nav ul li a:hover {
     width: 50px;
     border: 2px solid var(--main-color);
     border-radius: 50%;
-    /* background-color: rebeccapurple; */
+    cursor: pointer;
+}
+
+.account-btn:hover,
+.account-btn:focus {
+    background-color: #2980B9;
+    filter: drop-shadow(0px 0px 3px var(--main-color));
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 10px;
+    min-width: 160px;
+    z-index: 1;
+    border: 0;
+    background-color: var(--main-color);
 }
 
 .dropdown-content a {
@@ -205,7 +180,7 @@ nav ul li a:hover {
 
 .dropdown-content a:hover {
     background-color: var(--main-color-dark);
-    color: white;
+    /* color: white; */
 }
 
 .show {
@@ -294,11 +269,14 @@ img {
 footer {
     background-color: var(--main-color);
     color: white;
-    /* padding: 50px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+footer div {
+    margin: 10px;
 }
 
 #footer1 {
@@ -309,27 +287,10 @@ footer {
     align-items: center;
 }
 
-footer div {
-    margin: 10px;
-}
-
-#logo-footer {
-    display: block;
-    height: 80px;
-}
-
 #ten-doan {
-    /* color: var(--second-color); */
-    /* color: #152a23; */
     font-weight: bold;
     font-size: 1.3em;
 }
-
-
-/* 
-#thanh-vien {
-    color: #ffd700;
-} */
 
 .footer-icon {
     height: 40px;
@@ -337,7 +298,6 @@ footer div {
 }
 
 .footer-icon:hover {
-    /* filter: opacity(50%); */
     filter: drop-shadow(0px 0px 10px #000);
 }
 
@@ -367,10 +327,7 @@ footer div {
 
 @media (max-width: 768px) {
     #footer1 {
-        /* padding: 50px; */
-        /* display: flex; */
         flex-direction: column;
-        /* justify-content: space-around; */
         align-items: center;
     }
     #hr-footer {
