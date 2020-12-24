@@ -18,7 +18,7 @@
         <div class="contain-form">
             <form class="flex-row">
                 <h2>Chào mừng bạn đến với PetShop</h2>
-                <h2>Đăng nhập</h2>
+                <h2 id="title">Đăng nhập</h2>
                 <input placeholder="Tên đăng nhập hoặc email">
                 <input placeholder="Mật khẩu">
                 <div>
@@ -28,10 +28,16 @@
             </form>
             <hr>
             <div class="flex-row align-item-center">
-                <button>Đăng nhập với Google</button>
-                <button>Đăng nhập với Facebook</button>
-                <a href="./forgot-password.html">Quên mật khẩu</a>
-                <a href="./register.html">Tạo tài khoản</a>
+                <button id="login-gg">
+                    <img class="img-icon" src="./assets/icons/search.png">
+                    Đăng nhập với Google
+                </button>
+                <button id="login-fb">
+                    <img class="img-icon" src="./assets/icons/facebook.png">
+                    Đăng nhập với Facebook
+                </button>
+                <a class="link" href="./forgot-password.html">Quên mật khẩu</a>
+                <a class="link" href="./register.html">Tạo tài khoản</a>
             </div>
         </div>
     </div>

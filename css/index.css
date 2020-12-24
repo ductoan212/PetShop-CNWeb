@@ -3,7 +3,8 @@
     --main-color-dark: #043f5c;
     --main-color-dark-50: #043f5cbe;
     --second-color: #2f2f2f;
-    --color_nav: #ffffff;
+    --bg-color: #ffffff;
+    --color_nav: #f5f5f5;
     --font-fam: 'Lato', sans-serif;
     --rad: 0.5rem;
     --dur: 0.3s;
@@ -22,6 +23,7 @@
 html {
     min-width: 320px;
     scroll-behavior: smooth;
+    background-color: var(--bg-color);
 }
 
 
