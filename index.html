@@ -53,8 +53,51 @@
 
     <!-- Main Trong mục này có thể chia làm nhiều section -->
     <main>
+        <section id="slide-show">
+            <div class="slider">
+                <div class="slides">
+                    <!-- radio btn -->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <!-- imgages -->
+                    <div class="slide first">
+                        <img src="./assets/images/slideshow_1.jpg" alt="">
+                        <!-- <div class="test" style="background-color: yellow;"></div> -->
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/images/slideshow_2.jpg" alt="">
+                        <!-- <div class="test" style="background-color: blue;;"></div> -->
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/images/slideshow_3.jpg" alt="">
+                        <!-- <div class="test" style="background-color: green;;"></div> -->
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/images/slideshow_1.jpg" alt="">
+                        <!-- <div class="test" style="background-color: green;;"></div> -->
+                    </div>
+                    <!-- automatic navigation -->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                    <!-- manual navigation -->
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+                </div>
+
+            </div>
+        </section>
         <!-- Slider-->
-        <section>
+        <!-- <section>
             <div class="slideshow-container">
                 <div class="mySlides fade">
                     <div class="numbertext">1 / 3</div>
@@ -128,13 +171,12 @@
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis voluptate impedit molestiae tenetur dolores dolor, veniam repellat aliquid autem aspernatur eligendi reiciendis repudiandae, velit tempore! Facere voluptatum numquam nulla quidem.
             </p>
-        </section>
+        </section> -->
     </main>
 
     <!-- Scroll to Top Button-->
-    <button onclick="topFunction()" id="btnToTop" title="Go to top">
-        <!-- <img src="./assets/icons/back-to-top.png"> -->
-    </button>
+    <!-- <button onclick="topFunction()" id="btnToTop" title="Go to top">
+    </button> -->
 
 
     <!-- footer -->
