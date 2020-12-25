@@ -9,13 +9,14 @@
     <!-- Chèn css-->
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/navigation.css" />
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <!-- <script src="https://kit.fontawesome.com/yourcode.js"></script> -->
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav>
+    <!-- <nav>
         <img class="logo" src="./assets/images/logo_group2.png" />
 
         <div id="navigation">
@@ -49,6 +50,53 @@
                 </div>
             </div>
         </div>
+    </nav> -->
+
+    <nav>
+        <div class="logo">
+            <img src="./assets/images/logo_group2.png" />
+            <!-- <h4>THE PETSHOP</h4> -->
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <form id="contain-search" onsubmit="event.preventDefault();" role="search">
+                    <input id="search" type="search" placeholder="Tìm kiếm ..." autofocus required />
+                    <button id="btn-search" type="submit">Tìm</button>
+                </form>
+            </li>
+            <li>
+                <a class="link-active" href="#">Trang chủ</a>
+            </li>
+            <li>
+                <a href="#">Sản phẩm</a>
+            </li>
+            <li>
+                <a href="#">Blog</a>
+            </li>
+            <li>
+                <a href="#">Giới thiệu</a>
+            </li>
+            <li>
+                <a href="#">Liên hệ</a>
+            </li>
+        </ul>
+        <div class="contain-menu">
+            <div id="account-zone">
+                <div onclick="dropdownAccount()" class="account-btn"></div>
+                <div id="accountDropdown" class="dropdown-content">
+                    <a href="#">Tài khoản</a>
+                    <a href="#">Giỏ hàng</a>
+                    <a href="#">Đăng xuất</a>
+                </div>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+
     </nav>
 
     <!-- Main Trong mục này có thể chia làm nhiều section -->
@@ -163,7 +211,7 @@
                     </div>
                     <div id="detail-04">
                         <div>
-                            <h5>All<br> about<br> dogs</h5>
+                            <h5>All<br> about<br> cats</h5>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             <a href="#" class="hidden-link">Read more...</a>
                         </div>
@@ -239,7 +287,7 @@
     <footer>
         <div id="footer1">
             <div class="flex-col">
-                <img class="logo" src="./assets/images/logo_group2.png" />
+                <img class="logo-img" src="./assets/images/logo_group2.png" />
             </div>
             <div>
                 <div id="ten-doan">
