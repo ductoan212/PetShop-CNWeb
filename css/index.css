@@ -213,6 +213,10 @@ main {
     width: 100%
 }
 
+section {
+    margin: 20px 0px;
+}
+
 
 /* ======================== Định nghĩa Slide show ======================== */
 
@@ -353,7 +357,7 @@ main {
 /* ======================== Danh mục sp ======================== */
 
 #list-sp {
-    margin: 10px 0px;
+    margin: 80px 0px;
     /* background-color: #043f5c; */
     padding: 10px 80px;
 }
@@ -363,7 +367,7 @@ main {
     font-size: 2em;
 }
 
-#contain-list {
+.contain-list {
     display: grid;
     grid-template-columns: repeat(3, auto);
     justify-content: space-between;
@@ -533,6 +537,142 @@ main {
 }
 
 
+/* ======================== Danh mục blog ======================== */
+
+#list-blog {
+    margin: 80px 0px;
+    /* background-color: #043f5c; */
+    padding: 10px 80px;
+}
+
+#list-blog header {
+    color: var(--main-color-dark);
+    font-size: 2em;
+}
+
+.item-blog {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: 20px 0px;
+}
+
+.img-blog {
+    background-color: rebeccapurple;
+    width: 100%;
+    height: 200px;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.item-blog:hover {
+    box-shadow: 10px 10px 10px #D6D6D6;
+}
+
+.info-blog {
+    display: flex;
+    height: max-content;
+    justify-content: space-between;
+    /* background-color: #2e4957; */
+}
+
+.date {
+    font-size: 5em;
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+}
+
+.month-year {
+    background-color: var(--main-color);
+    text-align: center;
+    padding: 5px 0px;
+    color: #ffffff;
+}
+
+.blog-detail {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.blog-detail h5 {
+    font-size: 1.4em;
+}
+
+.blog-detail h6 {
+    font-size: 1.1em;
+    font-weight: 100;
+    color: #D6D6D6;
+}
+
+.blog-detail p {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+#blog1 {
+    background-image: url("../assets/images/blog1.jpg");
+}
+
+#blog2 {
+    background-image: url("../assets/images/blog2.jpg");
+}
+
+#blog3 {
+    background-image: url("../assets/images/blog3.jpg");
+}
+
+
+/* ======================== Subcribe ======================== */
+
+#subcribe {
+    background-color: var(--main-color-dark-20);
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#subcribe h5 {
+    color: var(--second-color);
+    font-size: 40px;
+}
+
+#subcribe div {
+    margin: 20px 10px;
+    display: flex;
+}
+
+#subcribe input {
+    font-size: 1.1em;
+    padding: 10px;
+    border: 0;
+    outline: none;
+    width: 500px;
+}
+
+#subcribe button {
+    font-size: 1.3em;
+    padding: 10px;
+    border: 0;
+    outline: none;
+    background-color: var(--main-color);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#subcribe button:hover {
+    background-color: var(--main-color-dark);
+}
+
+
 /* ======================== Back to Top ======================== */
 
 #btnToTop {
@@ -622,19 +762,22 @@ footer div {
 /* ======================== Reponsive ======================== */
 
 @media (max-width: 1500px) {
-    #contain-list {
+    .contain-list {
         grid-template-columns: repeat(2, auto);
     }
 }
 
 @media (max-width: 1000px) {
-    #contain-list {
+    .contain-list {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     #list-sp header {
+        text-align: center;
+    }
+    #list-blog header {
         text-align: center;
     }
 }
@@ -667,6 +810,17 @@ footer div {
     #detail-04 img {
         width: 30vw;
         height: 30vw;
+    }
+    #subcribe input {
+        width: 200px;
+    }
+    #detail-01 p {
+        padding: 10px 0px;
+        font-size: 3em;
+        width: 100%;
+        /* height: 28%; */
+        text-align: center;
+        margin: auto;
     }
 }
 
