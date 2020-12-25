@@ -378,19 +378,24 @@ section {
     display: flex;
     width: 400px;
     height: 150px;
-    box-shadow: 10px 10px 10px #D6D6D6;
+    /* box-shadow: 10px 10px 10px #D6D6D6; */
     margin: 30px 0px;
     overflow: hidden;
     cursor: pointer;
+    border: 1px solid #D6D6D6;
+    border-radius: 8px;
 }
 
 .item-san-pham:hover {
-    box-shadow: 10px 10px 10px #727272;
+    /* box-shadow: 10px 10px 10px #727272; */
+    box-shadow: 10px 10px 10px #D6D6D6;
 }
 
-.item-san-pham img {
-    width: 150px;
+.img-sp {
+    min-width: 150px;
     height: 150px;
+    background-color: rebeccapurple;
+    background-size: cover;
 }
 
 .info-sp {
@@ -404,6 +409,30 @@ section {
     color: var(--main-color);
     font-weight: bold;
     font-size: 1.5em;
+}
+
+#san-pham-1 {
+    background-image: url('../assets/images/san_pham_1.jpg');
+}
+
+#san-pham-2 {
+    background-image: url('../assets/images/san_pham_2.jpg');
+}
+
+#san-pham-3 {
+    background-image: url('../assets/images/san_pham_3.jpg');
+}
+
+#san-pham-4 {
+    background-image: url('../assets/images/san_pham_4.jpg');
+}
+
+#san-pham-5 {
+    background-image: url('../assets/images/san_pham_5.jpg');
+}
+
+#san-pham-6 {
+    background-image: url('../assets/images/san_pham_6.jpg');
 }
 
 
@@ -555,13 +584,13 @@ section {
     flex-direction: column;
     width: 350px;
     margin: 20px 0px;
+    cursor: pointer;
 }
 
 .img-blog {
     background-color: rebeccapurple;
     width: 100%;
     height: 200px;
-    cursor: pointer;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
