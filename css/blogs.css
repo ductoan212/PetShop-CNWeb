@@ -122,26 +122,26 @@ section {
 
 .blog-item {
     width: 100%;
+    height: max-content;
     margin: 30px 0px;
-    cursor: pointer;
     display: flex;
-}
-
-.blog-item:hover {
-    box-shadow: 0px 0px 10px var(--main-color-dark);
+    background-color: #043f5c;
 }
 
 .img-blog {
-    width: 100%;
     min-width: 400px;
     height: 400px;
-    background-color: var(--main-color-dark-20);
+    background-color: #acaaaa;
 }
 
 .info-blog {
-    padding: 10px 5px;
+    height: 400px;
+    padding: 10px 50px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f1f1f1;
 }
 
 .name-blog {
@@ -150,50 +150,46 @@ section {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    /* background-color: #aca9a9; */
+    margin-bottom: 10px;
 }
 
-.old-price-blogs {
-    font-size: 0.8em;
-    color: #aca9a9;
-    text-decoration: line-through;
+.content-blog {
+    /* height: 300px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
 }
 
-.new-price-blogs {
-    font-size: 1em;
-    color: var(--main-color-dark);
-    font-weight: bolder;
-}
-
-.add-to-cart button {
-    width: 100%;
-    padding: 12px;
-    background-color: var(--main-color);
-    outline: none;
-    border: 0;
-    color: #ffffff;
+.info-blog button {
+    width: 150px;
+    padding: 10px;
+    margin-top: 20px;
+    border-color: var(--main-color-dark);
     font-size: 1.2em;
     cursor: pointer;
+    outline: none;
 }
 
-.add-to-cart button:hover {
-    background-color: var(--main-color-dark);
+.info-blog button:hover {
+    /* background-color: var(--main-color);
+    color: #ffffff; */
+    box-shadow: 0px 0px 10px var(--main-color-dark-50);
 }
 
-@media screen and (max-width:1220px) {
-    .list-blogs {
-        grid-template-columns: repeat(3, auto);
+@media screen and (max-width:1024px) {
+    #control-blog {
+        flex-direction: column;
     }
-}
-
-@media screen and (max-width:900px) {
-    .list-blogs {
-        grid-template-columns: repeat(2, auto);
+    .blog-item {
+        flex-direction: column;
     }
-}
-
-@media screen and (max-width:600px) {
-    .list-blogs {
-        grid-template-columns: repeat(1, auto);
-        justify-content: center;
+    .img-blog {
+        min-width: 120px;
+        /* height: 400px; */
+        background-color: #131313;
     }
 }
