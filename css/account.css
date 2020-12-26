@@ -1,0 +1,404 @@
+:root {
+    --main-color: #2783B2;
+    --main-color-dark: #043f5c;
+    --main-color-dark-50: #043f5cbe;
+    --second-color: #2f2f2f;
+    --bg-color: #ffffff;
+    --color_nav: #f5f5f5;
+    --font-fam: 'Lato', sans-serif;
+    --rad: 0.5rem;
+    --dur: 0.3s;
+    --height-searchbar: 3rem;
+    --btn-width: 3.5rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: var(--font-fam);
+    font-size: 1.02em;
+}
+
+html {
+    min-width: 320px;
+    scroll-behavior: smooth;
+    background-color: var(--bg-color);
+}
+
+
+/* ======================== Navigation ======================== */
+
+nav {
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color_nav);
+    /* padding: 5px 50px; */
+}
+
+.logo {
+    display: block;
+    /* width: 100px; */
+    height: 80px;
+    /* margin-right: 10px; */
+    /* background-color: red; */
+    margin: 5px 10px;
+}
+
+#navigation {
+    display: flex;
+    align-items: center;
+}
+
+#nav-menu {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    /* background-color: blue; */
+}
+
+#nav-menu li {
+    list-style-type: none;
+    /* margin: 10px; */
+    padding: 10px 20px;
+    /* background-color: azure; */
+}
+
+#nav-menu li a {
+    text-decoration: none;
+    color: var(--second-color);
+    font-size: 1.1em;
+    /* font-weight: bold; */
+}
+
+#nav-menu li a:hover {
+    color: var(--main-color);
+}
+
+.menu-active {
+    color: var(--main-color) !important;
+}
+
+
+/* ======================== Search bar ======================== */
+
+#contain-search {
+    position: relative;
+    width: 18rem;
+    background: var(--main-color);
+    border-radius: var(--rad);
+    margin: 0px 10px;
+}
+
+#search,
+#btn-search {
+    height: var(--height-searchbar);
+    /* font-family: var(--font-fam); */
+    border: 0;
+    color: var(--second-color);
+    font-size: 1.1rem;
+}
+
+#search {
+    outline: 0;
+    width: 100%;
+    background: #D6D6D6;
+    padding: 0 1.6rem;
+    border-radius: var(--rad);
+    /* appearance: none; */
+    transition: all var(--dur) var(--bez);
+    transition-property: width, border-radius;
+    z-index: 1;
+    position: relative;
+}
+
+#btn-search {
+    /* display: none; */
+    outline: 0;
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--btn-width);
+    font-weight: bold;
+    background: var(--main-color);
+    color: white;
+    border-radius: 0 var(--rad) var(--rad) 0;
+}
+
+#btn-search:hover {
+    background-color: var(--main-color-dark);
+}
+
+#search:not(:placeholder-shown) {
+    border-radius: var(--rad) 0 0 var(--rad);
+    width: calc(100% - var(--btn-width));
+}
+
+
+/* ======================== Account zone ======================== */
+
+#account-zone {
+    margin: 10px;
+}
+
+.account-btn {
+    background-image: url("../assets/images/avatar.jpeg");
+    background-position: center;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.account-btn:hover,
+.account-btn:focus {
+    background-color: #2980B9;
+    filter: drop-shadow(0px 0px 3px var(--main-color));
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 10px;
+    min-width: 160px;
+    z-index: 1;
+    border: 0;
+    background-color: var(--main-color);
+}
+
+.dropdown-content a {
+    outline: 0;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: lighter;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--main-color-dark);
+    /* color: white; */
+}
+
+.show {
+    display: block;
+}
+
+
+/* ======================== Định nghĩa Slide show ======================== */
+
+.mySlides {
+    display: none;
+}
+
+img {
+    /* vertical-align: middle; */
+    max-height: 100vh;
+    width: auto;
+}
+
+.slideshow-container {
+    /* max-width: 1000px; */
+    position: relative;
+    margin: auto;
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    /* padding: 8px 12px; */
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* ======================== Aside ======================== */
+
+#menu-account {
+    padding: 15px 0px 0px 15px;
+}
+
+.aside {
+    margin-right: 17px;
+    width: 250px;
+}
+
+.avatar-small {
+    margin-right: 12px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.aside-menu-small {
+    padding: 18px 7px 7px 18px;
+}
+
+#icon-small {
+    height: 24px;
+    width: 24px;
+}
+
+/* ======================== Information Account ======================== */
+
+/* ======================== Back to Top ======================== */
+
+#btnToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: var(--main-color-dark-50);
+    background-image: url("../assets/icons/back-to-top.png");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btnToTop:hover {
+    background-color: var(--main-color-dark);
+    filter: drop-shadow(0px 0px 5px var(--main-color-dark));
+}
+
+
+/* ======================== Footer ======================== */
+
+footer {
+    background-color: var(--main-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div {
+    margin: 10px;
+}
+
+#footer1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#ten-doan {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.footer-icon {
+    height: 40px;
+    margin-right: 5px;
+}
+
+.footer-icon:hover {
+    filter: drop-shadow(0px 0px 10px #000);
+}
+
+.icon-footer-small {
+    height: 30px;
+    margin-right: 15px;
+}
+
+#help a {
+    width: fit-content;
+}
+
+#help a:hover {
+    /* color: var(--main-color-dark); */
+    filter: drop-shadow(0px 0px 10px #000);
+}
+
+#hr-footer {
+    width: 50%;
+    height: 1px;
+    background-color: white;
+    border: 0;
+}
+
+
+/* ======================== Reponsive ======================== */
+
+@media (max-width: 768px) {
+    #footer1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    #hr-footer {
+        width: 90%;
+    }
+    #contain-search {
+        display: none;
+    }
+}
+
+@media (max-width: 1270px) {
+    #nav-menu {
+        display: none;
+    }
+}
