@@ -5,7 +5,7 @@
     --second-color: #2f2f2f;
     --bg-color: #ffffff;
     --color_nav: #f5f5f5;
-    --font-fam: 'Lato', sans-serif;
+    --font-fam: "Roboto", sans-serif;
     --rad: 0.5rem;
     --dur: 0.3s;
     --height-searchbar: 3rem;
@@ -18,6 +18,7 @@
     margin: 0px;
     font-family: var(--font-fam);
     font-size: 1.02em;
+    box-sizing: border-box;
 }
 
 html {
@@ -192,90 +193,41 @@ nav {
 }
 
 
-/* ======================== Định nghĩa Slide show ======================== */
-
-.mySlides {
-    display: none;
-}
-
-img {
-    /* vertical-align: middle; */
-    max-height: 100vh;
-    width: auto;
-}
-
-.slideshow-container {
-    /* max-width: 1000px; */
-    position: relative;
-    margin: auto;
-}
-
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    /* padding: 8px 12px; */
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-.dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active {
-    background-color: #717171;
-}
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
-}
-
 /* ======================== Aside ======================== */
 
 #menu-account {
     padding: 15px 0px 0px 15px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+section {
+    display: flex;
 }
 
 .aside {
     margin-right: 17px;
     width: 250px;
+    background-color:whitesmoke;
+    border-radius: 5px;
+}
+
+.avatar-name {
+    display: flex;
+    align-items:center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.name {
+    display: flex;
+    align-items:center;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 20px;
 }
 
 .avatar-small {
@@ -285,16 +237,136 @@ img {
     border-radius: 50%;
 }
 
-.aside-menu-small {
-    padding: 18px 7px 7px 18px;
+.avatar-small:hover {
+    cursor: pointer;
+    border-color: var(--main-color);
+    border: 3px;
+}
+
+/* .aside-menu-small {
+    padding: 100px 18px 7px 18px;
+} */
+
+.aside a {
+    display: flex;
+    align-items:center;
+    padding: 7px 15px 7px 15px;
+    border-radius: 5px;
+}
+
+.aside li:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+    color: white;
+    border-radius: 5px;
+}
+
+.aside li:active {
+    background-color: deepskyblue;
 }
 
 #icon-small {
     height: 24px;
     width: 24px;
+    margin: 0px 10px 0px 0px;
+}
+
+#text-small {
+    color: #000000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.name {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.aside li {
+    list-style: none;
 }
 
 /* ======================== Information Account ======================== */
+
+.information-account {
+    box-sizing: border-box;
+    width: 78%;
+    background-color:whitesmoke;
+    border-radius: 5px;
+}
+
+.information-account h3 {
+    display: block;
+    font-size: 20px;
+    margin: 20px 0px 15px 0px;
+    padding-left: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.information-account-form {
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.form-lable {
+    padding-bottom: 15px;
+    align-items: center;
+    display: flex;
+}
+
+.input-lable {
+    width: 150px;
+    min-width: 120px;
+}
+
+.input-zone {
+    flex: 1 1 0%;
+    border: 1px solid;
+    border-radius: 5px;
+    height: 35px;
+    width: 370px;
+    padding: 6px 12px;
+    outline: none;
+    font-size: 100%;
+}
+
+.input-radio-lable {
+    margin-right: 15px;
+    width: 14px;
+    height: 14px;
+    transform: scale(1);
+}
+
+.input-radio {
+    margin-right: 10px;
+}
+
+select {
+    flex: 1 1 0%;
+    width: 110px;
+    border: 1px solid;
+    height: 35px;
+    padding: 6px 12px;
+    outline: none;
+    margin-right: 15px;
+    background: center;
+    font-size: 100%;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    width: 150px;
+    height: 35px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: lightskyblue;
+    outline: none;
+}
+
+.btn-submit:hover {
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: white;
+}
 
 /* ======================== Back to Top ======================== */
 
