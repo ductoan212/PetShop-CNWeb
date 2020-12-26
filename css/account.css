@@ -267,6 +267,34 @@ img {
     }
 }
 
+/* ======================== Aside ======================== */
+
+#menu-account {
+    padding: 15px 0px 0px 15px;
+}
+
+.aside {
+    margin-right: 17px;
+    width: 250px;
+}
+
+.avatar-small {
+    margin-right: 12px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.aside-menu-small {
+    padding: 18px 7px 7px 18px;
+}
+
+#icon-small {
+    height: 24px;
+    width: 24px;
+}
+
+/* ======================== Information Account ======================== */
 
 /* ======================== Back to Top ======================== */
 
