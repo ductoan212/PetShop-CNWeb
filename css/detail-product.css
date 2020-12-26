@@ -1,0 +1,193 @@
+:root {
+    --main-color: #2783B2;
+    --main-color-dark: #043f5c;
+    --main-color-dark-50: #043f5cbe;
+    --main-color-dark-20: #043f5c49;
+    --second-color: #2f2f2f;
+    --bg-color: #ffffff;
+    --color_nav: #f5f5f5;
+    --font-fam: 'Lato', sans-serif;
+    --rad: 0.5rem;
+    --dur: 0.3s;
+    --height-searchbar: 3rem;
+    --btn-width: 3.5rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: var(--font-fam);
+    font-size: 1.02em;
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 500px;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+main {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+section {
+    margin: 20px 0px;
+}
+
+
+/* ========================== chi tiet sp ==========================  */
+
+#detail-product {
+    margin: 10vh 10vw;
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#detail-product header {
+    color: var(--main-color-dark);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#detail-product>div {
+    background-color: #f5f5f5;
+    display: flex;
+}
+
+#img-product {
+    width: 50%;
+    height: 500px;
+    background-color: #043f5c;
+}
+
+#info-product {
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#name-product {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+#validate-product {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: #636363;
+    margin: 20px 0px;
+}
+
+#price-product {
+    /* background-color: #043f5c0c; */
+    margin: 20px 0px;
+}
+
+#title-price {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#old-price {
+    text-decoration: line-through;
+}
+
+#new-price {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--main-color-dark);
+}
+
+#add-product-to-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#add-product-to-cart div {
+    /* background-color: #043f5c; */
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#add-product-to-cart input {
+    outline: none;
+    width: 100px;
+}
+
+#add-product-to-cart button {
+    outline: none;
+    border: 0;
+    font-size: 1.5em;
+    padding: 10px;
+    background-color: var(--main-color);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#add-product-to-cart button:hover {
+    background-color: var(--main-color-dark);
+}
+
+
+/* ========================== mo ta sp ==========================  */
+
+#descript-product {
+    background-color: #f5f5f5;
+    margin: 1vh 10vw;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+#descript-product header {
+    color: var(--main-color-dark);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#other-products header {
+    color: var(--main-color-dark);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+/* ========================== mo ta sp ==========================  */
+
+#other-products {
+    margin: 10vh 5vw;
+}
+
+@media screen and (max-width:768px) {
+    #detail-product>div {
+        flex-direction: column;
+    }
+    #img-product {
+        width: 100%;
+    }
+    #info-product {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #other-products header {
+        text-align: center;
+    }
+}
