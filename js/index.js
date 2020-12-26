@@ -1,3 +1,65 @@
+// ==================== routing navigation ==================== 
+function closeBurger() {
+    if ($(window).width() <= 1024)
+        $('.burger').click();
+}
+
+function loadHome() {
+    $("#main").load("../pages/home.html");
+    $(".nav-links, li, a").removeClass("link-active");
+    $("#to-home").addClass("link-active");
+    document.title = "PetShop";
+    closeBurger();
+}
+
+function loadProducts() {
+    $("#main").load("../pages/products.html");
+    $(".nav-links, li, a").removeClass("link-active");
+    $("#to-products").addClass("link-active");
+    document.title = "PetShop | Sản phẩm";
+    closeBurger();
+}
+
+function loadBlogs() {
+    $("#main").load("../pages/blogs.html");
+    $(".nav-links, li, a").removeClass("link-active");
+    $("#to-blogs").addClass("link-active");
+    document.title = "PetShop | Bài viết";
+    closeBurger();
+}
+
+function loadAboutUs() {
+    $("#main").load("../pages/about-us.html");
+    $(".nav-links, li, a").removeClass("link-active");
+    $("#to-about-us").addClass("link-active");
+    document.title = "PetShop | Giới thiệu";
+    closeBurger();
+}
+
+function loadContact() {
+    $("#main").load("../pages/contact.html");
+    $(".nav-links, li, a").removeClass("link-active");
+    $("#to-contact").addClass("link-active");
+    document.title = "PetShop | Liên hệ";
+    closeBurger();
+}
+
+function loadAccount() {
+    $("#main").load("../pages/account.html");
+    $(".nav-links, li, a").removeClass("link-active");
+    document.title = "PetShop | Tài khoản";
+}
+
+function loadCart() {
+    $("#main").load("../pages/cart.html");
+    $(".nav-links, li, a").removeClass("link-active");
+    document.title = "PetShop | Giỏ hàng";
+}
+
+$(document).ready(function() {
+    loadHome();
+});
+
 // ====================================== Nav ======================================
 const navSlide = () => {
     const burger = document.querySelector('.burger');
@@ -18,7 +80,6 @@ const navSlide = () => {
         burger.classList.toggle('toggle');
     });
 }
-
 navSlide();
 
 // ====================================== Drop down for account zone ======================================
@@ -39,3 +100,13 @@ window.onclick = function(event) {
         }
     }
 }
+
+// Slide show
+var counter = 1;
+setInterval(function() {
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
+    if (counter > 3) {
+        counter = 1
+    }
+}, 5000);

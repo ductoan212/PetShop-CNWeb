@@ -19,7 +19,7 @@
     margin: 0px;
     font-family: var(--font-fam);
     font-size: 1.02em;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 html {
