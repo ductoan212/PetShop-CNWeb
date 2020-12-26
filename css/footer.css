@@ -1,0 +1,77 @@
+/* ======================== Footer ======================== */
+
+footer {
+    background-color: var(--main-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+footer div {
+    margin: 10px;
+}
+
+#footer1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo-img {
+    display: block;
+    height: 80px;
+    margin: 5px 10px;
+}
+
+#ten-doan {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.footer-icon {
+    height: 40px;
+    margin-right: 5px;
+}
+
+.footer-icon:hover {
+    filter: drop-shadow(0px 0px 10px #000);
+}
+
+.icon-footer-small {
+    height: 30px;
+    margin-right: 15px;
+}
+
+#help a {
+    width: fit-content;
+}
+
+#help a:hover {
+    /* color: var(--main-color-dark); */
+    filter: drop-shadow(0px 0px 10px #000);
+}
+
+#hr-footer {
+    width: 50%;
+    height: 1px;
+    background-color: white;
+    border: 0;
+}
+
+
+/* ======================== Reponsive ======================== */
+
+@media (max-width: 768px) {
+    #footer1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    #hr-footer {
+        width: 90%;
+    }
+}
