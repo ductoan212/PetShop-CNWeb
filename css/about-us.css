@@ -1,0 +1,122 @@
+:root {
+    --main-color: #2783B2;
+    --main-color-dark: #043f5c;
+    --main-color-dark-50: #043f5cbe;
+    --main-color-dark-20: #043f5c49;
+    --second-color: #2f2f2f;
+    --bg-color: #ffffff;
+    --color_nav: #f5f5f5;
+    --font-fam: 'Lato', sans-serif;
+    --rad: 0.5rem;
+    --dur: 0.3s;
+    --height-searchbar: 3rem;
+    --btn-width: 3.5rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: var(--font-fam);
+    font-size: 1.02em;
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 500px;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+main {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+section {
+    margin: 20px 0px;
+}
+
+
+/* ======================== about us ======================== */
+
+#about-us {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin: 10vh 5vw;
+}
+
+#about-us header {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#about-us>p {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #a3a2a2;
+    text-align: center;
+}
+
+.about-us-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+}
+
+.about-img {
+    width: 50%;
+    background-color: rebeccapurple;
+    background-position: center;
+    background-size: cover;
+}
+
+.about-detail {
+    width: 50%;
+    padding: 10px;
+}
+
+.about-detail h5 {
+    font-size: 2em;
+}
+
+#about-us hr {
+    height: 1px;
+    background-color: var(--main-color-dark);
+}
+
+#about-img-1 {
+    background-image: url('../assets/images/detail02.png');
+}
+
+#about-img-2 {
+    background-image: url('../assets/images/detail03.jpg');
+}
+
+#about-img-3 {
+    background-image: url('../assets/images/detail04.JPG');
+}
+
+@media screen and (max-width:768px) {
+    .about-us-item {
+        flex-direction: column;
+    }
+    .about-img {
+        width: 100%;
+        height: 50vh;
+    }
+    .about-detail {
+        width: 100%;
+    }
+}
