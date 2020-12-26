@@ -3,7 +3,7 @@
 .flex-row {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .flex-col {
@@ -22,4 +22,8 @@
 
 .jusify-between {
     justify-content: space-between;
+}
+
+.w100 {
+    width: 100%;
 }
