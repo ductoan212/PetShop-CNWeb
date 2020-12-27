@@ -8,6 +8,7 @@
     <!-- Chèn css-->
     <link rel="stylesheet" href="../css/login.css">
     <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <script src="../js/login.js"></script>
 </head>
 
 <body>
@@ -16,28 +17,28 @@
             <!-- <img class="img" src="../assets/images/login.jpg"> -->
         </div>
         <div class="contain-form">
-            <form class="flex-row">
+            <div class="flex-row">
                 <h2>Chào mừng bạn đến với PetShop</h2>
                 <h2 id="title">Đăng nhập</h2>
-                <input placeholder="Tên đăng nhập hoặc email">
-                <input placeholder="Mật khẩu">
+                <input type="email" placeholder="Tên đăng nhập hoặc email" id="txtEmail">
+                <input type="password" placeholder="Mật khẩu" id="txtPassword">
                 <div>
-                    <input type="checkbox"> Nhớ mật khẩu
+                    <input type="checkbox" checked> Nhớ mật khẩu
                 </div>
-                <button>Đăng nhập</button>
-            </form>
+                <button onclick="login()">Đăng nhập</button>
+            </div>
             <hr>
             <div class="flex-row align-item-center">
-                <button id="login-gg">
+                <button id="login-gg" onclick="loginGG()">
                     <img class="img-icon" src="../assets/icons/search.png">
                     Đăng nhập với Google
                 </button>
-                <button id="login-fb">
+                <button id="login-fb" onclick="loginFB()">
                     <img class="img-icon" src="../assets/icons/facebook.png">
                     Đăng nhập với Facebook
                 </button>
-                <a class="link" href="../forgot-password.html">Quên mật khẩu</a>
-                <a class="link" href="../register.html">Tạo tài khoản</a>
+                <a class="link" href="./forgot-password.html">Quên mật khẩu</a>
+                <a class="link" href="./register.html">Tạo tài khoản</a>
             </div>
         </div>
     </div>
