@@ -1,3 +1,9 @@
 $(document).ready(function() {
-    console.log("ready!");
+    createAllProduct();
 });
+
+function detailProduct(id) {
+    console.log("123");
+    console.log(id);
+    loadDetailProduct(id);
+}

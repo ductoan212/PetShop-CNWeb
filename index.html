@@ -5,7 +5,7 @@
     <!-- Thẻ meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PetShop | Trang chủ</title>
+    <title>PetShop</title>
     <!-- Chèn css-->
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -18,41 +18,40 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="logo">
+        <div class="logo" onclick="loadHome()">
             <img src="./assets/images/logo_group2.png" />
-            <!-- <h4>THE PETSHOP</h4> -->
         </div>
 
-        <ul class="nav-links">
+        <ul id="check-nav" class="nav-links">
             <li>
                 <form id="contain-search" onsubmit="event.preventDefault();" role="search">
                     <input id="search" type="search" placeholder="Tìm kiếm ..." autofocus required />
-                    <button id="btn-search" type="submit">Tìm</button>
+                    <button id="btn-search" type="submit" onclick="clearSearch()">Tìm</button>
                 </form>
             </li>
             <li>
-                <a class="link-active" href="#">Trang chủ</a>
+                <a id="to-home" class="link-active" href="#" onclick="loadHome()">Trang chủ</a>
             </li>
             <li>
-                <a href="./products.html">Sản phẩm</a>
+                <a id="to-products" href="#" onclick="loadProducts()">Sản phẩm</a>
             </li>
             <li>
-                <a href="#">Blog</a>
+                <a id="to-blogs" href="#" onclick="loadBlogs()">Blog</a>
             </li>
             <li>
-                <a href="#">Giới thiệu</a>
+                <a id="to-about-us" href="#" onclick="loadAboutUs()">Giới thiệu</a>
             </li>
             <li>
-                <a href="#">Liên hệ</a>
+                <a id="to-contact" href="#" onclick="loadContact()">Liên hệ</a>
             </li>
         </ul>
         <div class="contain-menu">
             <div id="account-zone">
                 <div onclick="dropdownAccount()" class="account-btn"></div>
                 <div id="accountDropdown" class="dropdown-content">
-                    <a href="#">Tài khoản</a>
-                    <a href="#">Giỏ hàng</a>
-                    <a href="#">Đăng xuất</a>
+                    <a id="to-account" href="#" onclick="loadAccount()">Tài khoản</a>
+                    <a id="to-cart" href="#" onclick="loadCart()">Giỏ hàng</a>
+                    <a href="./pages/login.html">Đăng xuất</a>
                 </div>
             </div>
             <div class="burger">
@@ -65,182 +64,8 @@
     </nav>
 
     <!-- Main Trong mục này có thể chia làm nhiều section -->
-    <main>
-        <section id="slide-show">
-            <div class="slider">
-                <div class="slides">
-                    <!-- radio btn -->
-                    <input type="radio" name="radio-btn" id="radio1">
-                    <input type="radio" name="radio-btn" id="radio2">
-                    <input type="radio" name="radio-btn" id="radio3">
-                    <input type="radio" name="radio-btn" id="radio4">
-                    <!-- imgages -->
-                    <div class="slide first">
-                        <div id="slide-img-1" class="slide-img"></div>
-                    </div>
-                    <div class="slide">
-                        <div id="slide-img-2" class="slide-img"></div>
-                    </div>
-                    <div class="slide">
-                        <div id="slide-img-3" class="slide-img"></div>
-                    </div>
-                    <div class="slide">
-                        <div id="slide-img-4" class="slide-img"></div>
-                    </div>
-                    <!-- automatic navigation -->
-                    <div class="navigation-auto">
-                        <div class="auto-btn1"></div>
-                        <div class="auto-btn2"></div>
-                        <div class="auto-btn3"></div>
-                        <div class="auto-btn4"></div>
-                    </div>
-                    <!-- manual navigation -->
-                    <div class="navigation-manual">
-                        <label for="radio1" class="manual-btn"></label>
-                        <label for="radio2" class="manual-btn"></label>
-                        <label for="radio3" class="manual-btn"></label>
-                        <label for="radio4" class="manual-btn"></label>
-                    </div>
-                </div>
+    <main id="main">
 
-            </div>
-        </section>
-        <section id="list-sp">
-            <header>Sản phẩm của chúng tôi</header>
-            <div class="contain-list">
-                <div class="item-san-pham">
-                    <!-- <img src="./assets/images/dog_food.jpg"> -->
-                    <div class="img-sp" id="san-pham-1"></div>
-                    <div class="info-sp">
-                        <p class="sp-name">Thức ăn</p>
-                        <p class="sp-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="item-san-pham">
-                    <div class="img-sp" id="san-pham-2"></div>
-                    <div class="info-sp">
-                        <p class="sp-name">Bát thức ăn</p>
-                        <p class="sp-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="item-san-pham">
-                    <div class="img-sp" id="san-pham-3"></div>
-                    <div class="info-sp">
-                        <p class="sp-name">Phụ kiện</p>
-                        <p class="sp-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="item-san-pham">
-                    <div class="img-sp" id="san-pham-4"></div>
-                    <div class="info-sp">
-                        <p class="sp-name">Bàn chải lông</p>
-                        <p class="sp-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="item-san-pham">
-                    <div class="img-sp" id="san-pham-5"></div>
-                    <div class="info-sp">
-                        <p class="sp-name">Giường</p>
-                        <p class="sp-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="item-san-pham">
-                    <div class="img-sp" id="san-pham-6"></div>
-                    <div class="info-sp">
-                        <p class="sp-name">Quần áo</p>
-                        <p class="sp-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <section id="detail-shop" class="flex-col">
-            <div id="detail-01">
-                <p>The PetShop</p>
-            </div>
-            <div class="contain-detail2">
-                <div id="detail-02">
-                    <div>
-                        <h5>Pet Love</h5>
-                        <hr>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aut praesentium! Voluptates id minus dolorum omnis. Ratione itaque odio voluptatibus aperiam quod reiciendis debitis, quisquam inventore, magnam deleniti provident sed?
-                        </p>
-                    </div>
-                </div>
-                <div class="flex-col w100">
-                    <div id="detail-03">
-                        <div>
-                            <h5>Adopt <br> Me</h5>
-                        </div>
-                    </div>
-                    <div id="detail-04">
-                        <div>
-                            <h5>All<br> about<br> cats</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <a href="#" class="hidden-link">Read more...</a>
-                        </div>
-                        <img src="./assets/images/detail03.jpg">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="list-blog">
-            <header>Bài viết</header>
-            <div class="contain-list">
-                <div class="item-blog">
-                    <div class="img-blog" id="blog1"></div>
-                    <div class="info-blog">
-                        <div class="date-post">
-                            <p class="date">18</p>
-                            <p class="month-year">10 - 2020</p>
-                        </div>
-                        <div class="blog-detail">
-                            <h5>Temporary Title</h5>
-                            <h6>Place sub-text here</h6>
-                            <p class="sp-detail">Lorem ipsum dolor sit amet, consec tetur adipi sicing elit sit amet...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-blog">
-                    <div class="img-blog" id="blog2"></div>
-                    <div class="info-blog">
-                        <div class="date-post">
-                            <p class="date">01</p>
-                            <p class="month-year">12 - 2020</p>
-                        </div>
-                        <div class="blog-detail">
-                            <h5>Temporary Title</h5>
-                            <h6>Place sub-text here</h6>
-                            <p class="sp-detail">Lorem ipsum dolor sit amet, consec tetur adipi sicing elit sit amet...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-blog">
-                    <div class="img-blog" id="blog3"></div>
-                    <div class="info-blog">
-                        <div class="date-post">
-                            <p class="date">28</p>
-                            <p class="month-year">12 - 2020</p>
-                        </div>
-                        <div class="blog-detail">
-                            <h5>Temporary Title</h5>
-                            <h6>Place sub-text here</h6>
-                            <p class="sp-detail">Lorem ipsum dolor sit amet, consec tetur adipi sicing elit sit amet...</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <section id="subcribe">
-            <h5>Đăng ký để nhận tin</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <div>
-                <input type="email" placeholder="Nhập email...">
-                <button>Gửi</button>
-            </div>
-        </section>
     </main>
 
     <!-- Scroll to Top Button-->
@@ -306,7 +131,10 @@
     </footer>
 
     <!-- Chèn JS -->
+    <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/back-to-top.js"></script>
+
 </body>
 
 </html>

@@ -1,183 +1,129 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <!-- Thẻ meta -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PetShop | Tài khoản</title>
-    <!-- Chèn css-->
-    <link rel="stylesheet" href="../css/account.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-
-    <!-- <script src="https://kit.fontawesome.com/yourcode.js"></script> -->
-</head>
-
-<body>
-    <!-- Navigation -->
-    <nav>
-        <img class="logo" src="../assets/images/logo_group2.png" />
-
-        <div id="navigation">
-            <ul id="nav-menu">
-                <li>
-                    <a class="menu-active" href="#">Trang chủ</a>
-                </li>
-                <li>
-                    <a href="#">Sản phẩm</a>
-                </li>
-                <li>
-                    <a href="#">Blog</a>
-                </li>
-                <li>
-                    <a href="#">Giới thiệu</a>
-                </li>
-                <li>
-                    <a href="#">Liên hệ</a>
-                </li>
-            </ul>
-            <form id="contain-search" onsubmit="event.preventDefault();" role="search">
-                <input id="search" type="search" placeholder="Tìm kiếm ..." autofocus required />
-                <button id="btn-search" type="submit">Tìm</button>
-            </form>
-            <div id="account-zone">
-                <div onclick="dropdownAccount()" class="account-btn"></div>
-                <div id="accountDropdown" class="dropdown-content">
-                    <a href="#">Tài khoản</a>
-                    <a href="#">Giỏ hàng</a>
-                    <a href="#">Đăng xuất</a>
-                </div>
+<link rel="stylesheet" href="../css/account.css" />
+<div id="menu-account">
+    <div class="aside">
+        <aside class="aside">
+            <!-- avatar, name of user -->
+            <div class="avatar-name">
+                <img src="../assets/images/avatar.jpeg" class="account-btn">
+                <strong class="name">Nguyễn Văn A</strong>
             </div>
-        </div>
-    </nav>
-
-    <!-- Main Trong mục này có thể chia làm nhiều section -->
-    <main>
-        <div id="menu-account">
-            <div class="aside">
-                <aside class="aside">
-                    <!-- avatar, name of user -->
-                    <div class="avatar-name">
-                        <img src="../assets/images/avatar.jpeg" class="account-btn">
-                        <strong class="name">Nguyễn Văn A</strong>
-                    </div>
-                    <!-- menu left -->
-                    <div>
-                        <ul>
-                            <li>
-                                <a>
-                                    <img src="../assets/icons/user.svg" id="icon-small">
-                                    <span id="text-small">Thông tin tài khoản</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <img src="../assets/icons/notification-bell.svg" id="icon-small">
-                                    <span id="text-small">Thông báo</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <img src="../assets/icons/order.svg" id="icon-small">
-                                    <span id="text-small">Quản
+            <!-- menu left -->
+            <div>
+                <ul>
+                    <li>
+                        <a>
+                            <img src="../assets/icons/user.svg" id="icon-small">
+                            <span id="text-small">Thông tin tài khoản</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="../assets/icons/notification-bell.svg" id="icon-small">
+                            <span id="text-small">Thông báo</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="../assets/icons/order.svg" id="icon-small">
+                            <span id="text-small">Quản
                                         lý đơn hàng</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <img src="../assets/icons/position.svg" id="icon-small">
-                                    <span id="text-small">Danh
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="../assets/icons/position.svg" id="icon-small">
+                            <span id="text-small">Danh
                                         sách địa chỉ</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <img src="../assets/icons/credit-cards-payment.svg" id="icon-small">
-                                    <span id="text-small">Thông
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="../assets/icons/credit-cards-payment.svg" id="icon-small">
+                            <span id="text-small">Thông
                                         tin thanh toán</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <img src="../assets/icons/discount.svg" id="icon-small">
-                                    <span id="text-small">Mã
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="../assets/icons/discount.svg" id="icon-small">
+                            <span id="text-small">Mã
                                         giảm giá</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <img src="../assets/icons/shopping-cart.svg" id="icon-small">
-                                    <span id="text-small">Giỏ
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="../assets/icons/shopping-cart.svg" id="icon-small">
+                            <span id="text-small">Giỏ
                                         hàng</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <img src="../assets/icons/heart.svg" id="icon-small">
-                                    <span id="text-small">Sản
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="../assets/icons/heart.svg" id="icon-small">
+                            <span id="text-small">Sản
                                         phẩm yêu thích</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <img src="../assets/icons/star.svg" id="icon-small">
-                                    <span id="text-small">Đánh
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="../assets/icons/star.svg" id="icon-small">
+                            <span id="text-small">Đánh
                                         giá</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <img src="../assets/icons/question-mark.svg" id="icon-small">
-                                    <span id="text-small">Hỏi
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="../assets/icons/question-mark.svg" id="icon-small">
+                            <span id="text-small">Hỏi
                                         đáp</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
+                        </a>
+                    </li>
+                </ul>
             </div>
+        </aside>
+    </div>
 
-            <!-- Information Account -->
-            <div class="information-account">
-                <div>
-                    <h3>Thông tin tài khoản</h3>
-                    <div class="information-account-form">
-                        <form>
-                            <div class="form-lable">
-                                <label class="input-lable">Họ tên</label>
-                                <div>
-                                    <input class="input-zone" type="text" name="fullName" maxlength="128" value="Nguyễn Văn A" />
-                                </div>
-                            </div>
-                            <div class="form-lable">
-                                <label class="input-lable">Số điện thoại</label>
-                                <div>
-                                    <input class="input-zone" type="number" name="phoneNumber" value="0123456789" min="0" max="9999999999" />
-                                </div>
-                            </div>
-                            <div class="form-lable">
-                                <label class="input-lable">Email</label>
-                                <div>
-                                    <input class="input-zone" type="text" name="email" disabled value="petshop@gm.uit.edu.vn">
-                                </div>
-                            </div>
-                            <div class="form-lable">
-                                <label class="input-lable">Giới tính</label>
-                                <div>
-                                    <label class="input-radio-lable">
+    <!-- Information Account -->
+    <div class="information-account">
+        <div>
+            <h3>Thông tin tài khoản</h3>
+            <div class="information-account-form">
+                <form>
+                    <div class="form-lable">
+                        <label class="input-lable">Họ tên</label>
+                        <div>
+                            <input class="input-zone" type="text" name="fullName" maxlength="128" value="Nguyễn Văn A" />
+                        </div>
+                    </div>
+                    <div class="form-lable">
+                        <label class="input-lable">Số điện thoại</label>
+                        <div>
+                            <input class="input-zone" type="number" name="phoneNumber" value="0123456789" min="0" max="9999999999" />
+                        </div>
+                    </div>
+                    <div class="form-lable">
+                        <label class="input-lable">Email</label>
+                        <div>
+                            <input class="input-zone" type="text" name="email" disabled value="petshop@gm.uit.edu.vn">
+                        </div>
+                    </div>
+                    <div class="form-lable">
+                        <label class="input-lable">Giới tính</label>
+                        <div>
+                            <label class="input-radio-lable">
                                         <input class="input-radio" type="radio" name="gender" value="male" checked>
                                         <span>Nam</span>
                                     </label>
-                                    <label class="input-radio-lable">
+                            <label class="input-radio-lable">
                                         <input class="input-radio" type="radio" name="gender" value="female">
                                         <span>Nữ</span>
                                     </label>
-                                </div>
-                            </div>
-                            <div class="form-lable">
-                                <label class="input-lable">Ngày sinh</label>
-                                <div>
-                                    <select name="day">
+                        </div>
+                    </div>
+                    <div class="form-lable">
+                        <label class="input-lable">Ngày sinh</label>
+                        <div>
+                            <select name="day">
                                         <option value="0">Ngày</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -211,7 +157,7 @@
                                         <option value="30">30</option>
                                         <option value="31">31</option>
                                     </select>
-                                    <select name="month">
+                            <select name="month">
                                         <option value="0">Tháng</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -226,7 +172,7 @@
                                         <option value="11">11</option>
                                         <option value="12">12</option>
                                     </select>
-                                    <select name="year">
+                            <select name="year">
                                         <option value="0">Năm</option>
                                         <option value="2020">2020</option>
                                         <option value="2019">2019</option>
@@ -295,92 +241,20 @@
                                         <option value="1956">1956</option>
                                         <option value="1955">1955</option>
                                     </select>
-                                </div>
-                            </div>
-                            <!-- <div>
+                        </div>
+                    </div>
+                    <!-- <div>
                                         <label>
                                             <input type="checkbox">
                                             <span>Thay đổi mật khẩu</span>
                                         </label>
                                     </div> -->
-                            <div class="form-lable">
-                                <label class="input-lable"></label>
-                                <button class="btn-submit" type="submit">Cập nhật</button>
-                            </div>
+                    <div class="form-lable">
+                        <label class="input-lable"></label>
+                        <button class="btn-submit" type="submit">Cập nhật</button>
                     </div>
-                    </form>
-                </div>
             </div>
+            </form>
         </div>
-    </main>
-
-    <!-- Scroll to Top Button-->
-    <button onclick="topFunction()" id="btnToTop" title="Go to top">
-        <!-- <img src="../assets/icons/back-to-top.png"> -->
-    </button>
-
-
-    <!-- footer -->
-    <footer>
-        <div id="footer1">
-            <div class="flex-col">
-                <img class="logo" src="../assets/images/logo_group2.png" />
-            </div>
-            <div>
-                <div id="ten-doan">
-                    <p>ĐỒ ÁN: INTERNET VÀ CÔNG NGHỆ WEB</p>
-                    <p>GVHD: ThS. Võ Ngọc Tân</p>
-                </div>
-                <br />
-                <div id="thanh-vien">
-                    <p>Thành viên:</p>
-                    <p>1. Phạm Đức Toàn</p>
-                    <p>2. Trương Thanh Thiên</p>
-                </div>
-            </div>
-            <div id="contact">
-                <div class="mb-5 flex-row jusify-between">
-                    <a class="hidden-link" href="https://www.facebook.com/" target="blank">
-                        <img class="footer-icon" src="../assets/icons/facebook.svg" alt="Facebook" />
-                    </a>
-                    <a class="hidden-link" href="https://www.instagram.com/" target="blank">
-                        <img class="footer-icon" src="../assets/icons/instagram.svg" alt="Instagram" />
-                    </a>
-                    <a class="hidden-link" href="https://twitter.com/" target="blank">
-                        <img class="footer-icon" src="../assets/icons/twitter.svg" alt="Twitter" />
-                    </a>
-                    <a class="hidden-link" href="https://www.youtube.com/" target="blank">
-                        <img class="footer-icon" src="../assets/icons/youtube.svg" alt="Youtube" />
-                    </a>
-                </div>
-                <div id="help" class="flex-col">
-                    <a id="footer-help" class="flex-row hidden-link mb-5" href="#">
-                        <img class="icon-footer-small" src="../assets/icons/question.svg" alt="Help" />
-                        <p>Trợ giúp</p>
-                    </a>
-                    <a id="footer-phone" class="flex-row hidden-link mb-5" href="#">
-                        <img class="icon-footer-small" src="../assets/icons/phone-call.svg" alt="Call" />
-                        <p>0123456789</p>
-                    </a>
-                    <a id="footer-mail" class="flex-row hidden-link mb-5" href="#">
-                        <img class="icon-footer-small" src="../assets/icons/email.svg  " alt="Email" />
-                        <p>petshop@gm.uit.edu.vn</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <hr id="hr-footer" />
-
-        <div class="footer2">
-            &copy; 2020 PetShop
-        </div>
-    </footer>
-
-    <!-- Chèn JS -->
-    <script src="../js/index.js"></script>
-    <script src="../js/back-to-top.js"></script>
-
-</body>
-
-</html>
+    </div>
+</div>

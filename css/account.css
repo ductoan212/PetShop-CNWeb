@@ -5,7 +5,7 @@
     --second-color: #2f2f2f;
     --bg-color: #ffffff;
     --color_nav: #f5f5f5;
-    --font-fam: "Roboto", sans-serif;
+    /* --font-fam: "Roboto", sans-serif; */
     --rad: 0.5rem;
     --dur: 0.3s;
     --height-searchbar: 3rem;
@@ -28,171 +28,6 @@ html {
 }
 
 
-/* ======================== Navigation ======================== */
-
-nav {
-    position: sticky;
-    top: 0px;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--color_nav);
-    /* padding: 5px 50px; */
-}
-
-.logo {
-    display: block;
-    /* width: 100px; */
-    height: 80px;
-    /* margin-right: 10px; */
-    /* background-color: red; */
-    margin: 5px 10px;
-}
-
-#navigation {
-    display: flex;
-    align-items: center;
-}
-
-#nav-menu {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    /* background-color: blue; */
-}
-
-#nav-menu li {
-    list-style-type: none;
-    /* margin: 10px; */
-    padding: 10px 20px;
-    /* background-color: azure; */
-}
-
-#nav-menu li a {
-    text-decoration: none;
-    color: var(--second-color);
-    font-size: 1.1em;
-    /* font-weight: bold; */
-}
-
-#nav-menu li a:hover {
-    color: var(--main-color);
-}
-
-.menu-active {
-    color: var(--main-color) !important;
-}
-
-
-/* ======================== Search bar ======================== */
-
-#contain-search {
-    position: relative;
-    width: 18rem;
-    background: var(--main-color);
-    border-radius: var(--rad);
-    margin: 0px 10px;
-}
-
-#search,
-#btn-search {
-    height: var(--height-searchbar);
-    /* font-family: var(--font-fam); */
-    border: 0;
-    color: var(--second-color);
-    font-size: 1.1rem;
-}
-
-#search {
-    outline: 0;
-    width: 100%;
-    background: #D6D6D6;
-    padding: 0 1.6rem;
-    border-radius: var(--rad);
-    /* appearance: none; */
-    transition: all var(--dur) var(--bez);
-    transition-property: width, border-radius;
-    z-index: 1;
-    position: relative;
-}
-
-#btn-search {
-    /* display: none; */
-    outline: 0;
-    border: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: var(--btn-width);
-    font-weight: bold;
-    background: var(--main-color);
-    color: white;
-    border-radius: 0 var(--rad) var(--rad) 0;
-}
-
-#btn-search:hover {
-    background-color: var(--main-color-dark);
-}
-
-#search:not(:placeholder-shown) {
-    border-radius: var(--rad) 0 0 var(--rad);
-    width: calc(100% - var(--btn-width));
-}
-
-
-/* ======================== Account zone ======================== */
-
-#account-zone {
-    margin: 10px;
-}
-
-.account-btn {
-    background-image: url("../assets/images/avatar.jpeg");
-    background-position: center;
-    background-size: contain;
-    height: 50px;
-    width: 50px;
-    border: 2px solid var(--main-color);
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.account-btn:hover,
-.account-btn:focus {
-    background-color: #2980B9;
-    filter: drop-shadow(0px 0px 3px var(--main-color));
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 10px;
-    min-width: 160px;
-    z-index: 1;
-    border: 0;
-    background-color: var(--main-color);
-}
-
-.dropdown-content a {
-    outline: 0;
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-weight: lighter;
-}
-
-.dropdown-content a:hover {
-    background-color: var(--main-color-dark);
-    /* color: white; */
-}
-
-.show {
-    display: block;
-}
-
-
 /* ======================== Aside ======================== */
 
 #menu-account {
@@ -202,6 +37,7 @@ nav {
     flex-wrap: wrap;
     box-sizing: border-box;
     margin-bottom: 20px;
+    margin-top: 10vh;
 }
 
 section {
@@ -211,20 +47,20 @@ section {
 .aside {
     margin-right: 17px;
     width: 250px;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     border-radius: 5px;
 }
 
 .avatar-name {
     display: flex;
-    align-items:center;
+    align-items: center;
     padding: 5px;
     border-radius: 5px;
 }
 
 .name {
     display: flex;
-    align-items:center;
+    align-items: center;
     padding: 15px;
     border-radius: 5px;
     font-size: 20px;
@@ -243,13 +79,14 @@ section {
     border: 3px;
 }
 
+
 /* .aside-menu-small {
     padding: 100px 18px 7px 18px;
 } */
 
 .aside a {
     display: flex;
-    align-items:center;
+    align-items: center;
     padding: 7px 15px 7px 15px;
     border-radius: 5px;
 }
@@ -278,19 +115,19 @@ section {
 
 .name {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
 }
 
 .aside li {
     list-style: none;
 }
 
+
 /* ======================== Information Account ======================== */
 
 .information-account {
     box-sizing: border-box;
     width: 78%;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     border-radius: 5px;
 }
 
@@ -367,6 +204,7 @@ select {
     background-color: var(--main-color);
     color: white;
 }
+
 
 /* ======================== Back to Top ======================== */
 
