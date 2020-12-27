@@ -22,6 +22,8 @@
     width: 50%;
     height: 500px;
     background-color: #043f5c;
+    background-position: center;
+    background-size: cover;
 }
 
 #info-product {
