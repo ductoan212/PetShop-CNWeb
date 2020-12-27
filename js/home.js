@@ -6,6 +6,11 @@ $(".item-san-pham").click(function() {
 });
 
 $(".item-blog").click(function() {
-    loadBlogs();
+    loadDetailBlog();
+    topFunction();
+});
+
+$("#read-more-about-us").click(function() {
+    loadAboutUs();
     topFunction();
 });
