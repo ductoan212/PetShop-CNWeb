@@ -50,15 +50,15 @@
 }
 
 #about-img-1 {
-    background-image: url('../assets/images/detail02.png');
+    background-image: url('../assets/images/AboutUs1.jpg');
 }
 
 #about-img-2 {
-    background-image: url('../assets/images/detail03.jpg');
+    background-image: url('../assets/images/AboutUs2.jpg');
 }
 
 #about-img-3 {
-    background-image: url('../assets/images/detail04.JPG');
+    background-image: url('../assets/images/AboutUs3.jpg');
 }
 
 @media screen and (max-width:768px) {

@@ -17,6 +17,7 @@ nav {
     display: block;
     height: 10vh;
     margin: 0px 20px;
+    cursor: pointer;
 }
 
 .nav-links {
@@ -52,6 +53,7 @@ nav {
 
 .burger {
     display: none;
+    cursor: pointer;
 }
 
 .burger div {

@@ -85,6 +85,24 @@
     min-width: 400px;
     height: 400px;
     background-color: #acaaaa;
+    background-position: center;
+    background-size: cover;
+}
+
+#blog01 {
+    background-image: url(../assets/images/blog4.jpg);
+}
+
+#blog02 {
+    background-image: url(../assets/images/blog5.jpg);
+}
+
+#blog03 {
+    background-image: url(../assets/images/blog6.jpg);
+}
+
+#blog04 {
+    background-image: url(../assets/images/blog7.jpg);
 }
 
 .info-blog {

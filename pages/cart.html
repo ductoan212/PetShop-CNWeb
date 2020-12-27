@@ -1,21 +1,86 @@
 <!-- Cart Overlay -->
 <link rel="stylesheet" href="../css/cart.css" />
-<section id="cart" class="cart-overlay">
-    <aside class="cart-wrapper">
-        <div class="cart-header">
-            <button class="close-cart"><i class="fas fa-times"></i></button>
-            <h1>Cart Shopping</h1>
-        </div>
-        <div class="cart-products">
-
-
-        </div>
-        <div class="cart-footer">
-            <div class="total">Total : <span class="price-total">333</span></div>
-            <div class="btn-center">
-                <button class="clear-btn">Clear</button>
-                <button class="checkout-btn">Checkout</button>
+<section id="cart">
+    <header>Giỏ hàng</header>
+    <div id="list-cart">
+        <!-- <div>
+            <p>hinh</p>
+            <p>Ten sp</p>
+            <p>sl</p>
+            <p>tong gia</p>
+            <p></p>
+        </div> -->
+        <!-- <div class="item-product">
+            <div class="img-product"></div>
+            <div class="info-product">
+                <div class="name-price">
+                    <p class="name-product">Ten san pham</p>
+                    <p class="price-product">150</p>
+                </div>
+                <div class="quantity-product">
+                    <input type="number" min="1" value="1">
+                </div>
+                <div class="sum-price-product">150.000 vnd</div>
+            </div>
+            <div class="delete-product">
+                <img src="../assets/icons/remove.png">
             </div>
         </div>
-    </aside>
+        <div class="item-product">
+            <div class="img-product"></div>
+            <div class="info-product">
+                <div class="name-price">
+                    <p class="name-product">Ten san pham</p>
+                    <p class="price-product">150</p>
+                </div>
+                <div class="quantity-product">
+                    <input type="number" min="1" value="1">
+                </div>
+                <div class="sum-price-product">150.000 vnd</div>
+            </div>
+            <div class="delete-product">
+                <img src="../assets/icons/remove.png">
+            </div>
+        </div>
+        <div class="item-product">
+            <div class="img-product"></div>
+            <div class="info-product">
+                <div class="name-price">
+                    <p class="name-product">Ten san pham</p>
+                    <p class="price-product">150</p>
+                </div>
+                <div class="quantity-product">
+                    <input type="number" min="1" value="1">
+                </div>
+                <div class="sum-price-product">150.000 vnd</div>
+            </div>
+            <div class="delete-product">
+                <img src="../assets/icons/remove.png">
+            </div>
+        </div>
+        <div class="item-product">
+            <div class="img-product"></div>
+            <div class="info-product">
+                <div class="name-price">
+                    <p class="name-product">Ten san pham</p>
+                    <p class="price-product">150</p>
+                </div>
+                <div class="quantity-product">
+                    <input type="number" min="1" value="1">
+                </div>
+                <div class="sum-price-product">150.000 vnd</div>
+            </div>
+            <div class="delete-product">
+                <img src="../assets/icons/remove.png">
+            </div>
+        </div> -->
+    </div>
+    <div class="checkout">
+        <p id="total">Toonfg tien: 150.000</p>
+        <div>
+            <button id="btn-cal-total" onclick="updateTotal()">Tinh tong</button>
+            <button id="btn-checkout" onclick="checkout()">Thanh toan</button>
+        </div>
+    </div>
 </section>
+<script src="../js/cart.js"></script>
