@@ -115,29 +115,6 @@ function getProductWithId(id) {
 //==================== Store list item in cart ====================
 var listCart = [];
 
-// {
-//     info: {
-//         id: "pd-001",
-//         nameImg: "san_pham_1.jpg",
-//         name: "Temp product 1",
-//         oldPrice: 120,
-//         newPrice: 99
-//     },
-//     quantity: 10,
-//     sum: 990
-// },
-// {
-//     info: {
-//         id: "pd-002",
-//         nameImg: "san_pham_2.jpg",
-//         name: "Temp product 2",
-//         oldPrice: 100,
-//         newPrice: 79
-//     },
-//     quantity: 10,
-//     sum: 790
-// }
-
 function createItemCart(item) {
     return `<div class="item-product" id="${item["info"]["id"]}">
                 <div class="img-product" style="background-image:  url(../assets/images/${item["info"]["nameImg"]});"></div>
@@ -186,11 +163,8 @@ function updateTotal() {
         var sum = listCart[i]["info"]["newPrice"] * quantity;
         listCart[i]["quantity"] = parseInt(quantity);
         listCart[i]["sum"] = parseInt(sum);
-        // console.log(listCart[i]);
         $(`#sum-${listCart[i]["info"]["id"]}`).text(`${sum}.000 VNĐ`);
     }
-    // loadCart();
-    console.log("listCart");
     document.getElementById(
         "total"
     ).innerHTML = `Tổng tiền: ${calculateTotal()}.000 VNĐ`;
@@ -235,15 +209,10 @@ function removeItemOnCart(id) {
         i++;
     }
     if (i == listCart.length) return;
-    // if (listCart.length == 1)
-    //     listCart = [];
     console.log(i);
     temp1 = listCart.slice(0, i);
     temp2 = listCart.slice(i + 1, listCart.length);
     listCart = temp1.concat(temp2);
-    console.log(listCart);
-    // console.log(temp1);
-    // console.log(temp2);
     loadCart();
 }
 
@@ -343,15 +312,13 @@ function loadCart() {
         $("#main").load("../pages/cart.html");
     }
     $(".nav-links, li, a").removeClass("link-active");
-    // createAllCart();
     document.getElementById(
         "total"
     ).innerHTML = `Tổng tiền: ${calculateTotal()}.000 VNĐ`;
 }
 
 $(document).ready(function() {
-    // loadHome();
-    loadProducts();
+    loadHome();
 });
 
 // ====================================== Nav ======================================

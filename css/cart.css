@@ -1,11 +1,8 @@
 /* ======================== cart ======================== */
 
 #cart {
-    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
     margin: 15vh 15vw;
 }
 
@@ -22,7 +19,6 @@
     display: flex;
     margin: 10px 0;
     border: 1px solid #00000025;
-    /* border-radius: 8px; */
 }
 
 .img-product {
@@ -31,11 +27,9 @@
     height: 100%;
     background-position: center;
     background-size: cover;
-    /* background-image: url(../assets/images/san_pham_1.jpg); */
 }
 
 .info-product {
-    /* background-color: blue; */
     flex-grow: 1;
     height: 150px;
     padding: 10px;
@@ -60,14 +54,12 @@
 }
 
 .quantity-product {
-    /* background-color: aqua; */
     width: min-content;
     display: flex;
     align-items: center;
 }
 
 .quantity-product input {
-    /* background-color: aqua; */
     width: 150px;
     outline: none;
     padding: 10px;
@@ -75,14 +67,12 @@
 }
 
 .sum-price-product {
-    /* background-color: yellowgreen; */
     min-width: 150px;
     display: flex;
     align-items: center;
 }
 
 .delete-product {
-    /* background-color: rgb(199, 206, 185); */
     min-width: 50px;
     display: flex;
     align-items: center;

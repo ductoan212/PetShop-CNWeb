@@ -97,7 +97,6 @@ nav {
 }
 
 #btn-search {
-    /* display: none; */
     outline: 0;
     border: 0;
     position: absolute;
@@ -164,7 +163,6 @@ nav {
 
 .dropdown-content a:hover {
     background-color: var(--main-color-dark);
-    /* color: white; */
 }
 
 .show {

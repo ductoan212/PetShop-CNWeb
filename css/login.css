@@ -20,8 +20,6 @@
 }
 
 body {
-    /* width: 100vw;
-    height: 100vh; */
     background-color: var(--main-color);
     display: block;
     justify-content: center;
@@ -103,7 +101,6 @@ button:hover {
 }
 
 #login-gg {
-    /* background-color: #d34836; */
     border: 2px solid #d34836;
     background-color: #ffffff;
     color: #d34836;
@@ -127,7 +124,6 @@ button:hover {
 }
 
 #login-fb {
-    /* background-color: #3b5998; */
     border: 2px solid #3b5998;
     background-color: #ffffff;
     color: #3b5998;
@@ -160,11 +156,9 @@ hr {
 
 @media (max-width: 1000px) {
     .container {
-        /* width: 50%; */
         width: fit-content;
         min-width: 200px;
         max-width: 500px;
-        /* margin-left: 10px; */
         margin-top: 0px;
     }
     .img-login {
