@@ -66,13 +66,10 @@ body {
     font-size: 20px;
 }
 
-h2 {
-    text-align: center;
-    color: var(--main-color);
-}
-
 #title {
+    text-align: center;
     color: var(--main-color-dark);
+    font-weight: lighter;
 }
 
 input {

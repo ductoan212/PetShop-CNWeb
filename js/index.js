@@ -85,25 +85,29 @@ const listProduct = [{
     },
 ];
 
-function createProduct(n) {
-    return `<div class="product-item" id="${listProduct[n]["id"]}" >
-        <div onClick="detailProduct('${listProduct[n]["id"]}')">
-            <div class="img-product" style="background-image:  url(../assets/images/${listProduct[n]["nameImg"]});"></div>
+function createProduct(item) {
+    return `<div class="product-item" id="${item["id"]}" >
+        <div onClick="detailProduct('${item["id"]}')">
+            <div class="img-product" style="background-image:  url(../assets/images/${item["nameImg"]});"></div>
             <div class="info-product">
-                <p class="name-product">${listProduct[n]["name"]}</p>
-                <p class="old-price-product">${listProduct[n]["oldPrice"]}.000 VNĐ</p>
-                <p class="new-price-product">${listProduct[n]["newPrice"]}.000 VNĐ</p>
+                <p class="name-product">${item["name"]}</p>
+                <p class="old-price-product">${item["oldPrice"]}.000 VNĐ</p>
+                <p class="new-price-product">${item["newPrice"]}.000 VNĐ</p>
             </div>
         </div>
         <div class="add-to-cart">
-            <button id="btn-${listProduct[n]["id"]}" onclick="addToCart('${listProduct[n]["id"]}')">Thêm vào giỏ</button>
+            <button id="btn-${item["id"]}" onclick="addToCart('${item["id"]}')">Thêm vào giỏ</button>
         </div>
     </div>`;
 }
 
-function createAllProduct() {
-    for (var i = 0; i < 12; i++) $("#lst-product").append(createProduct(i));
+function createAllProduct(list) {
+    for (var i = 0; i < list.length; i++) {
+        $("#lst-product").append(createProduct(list[i]));
+    }
 }
+
+
 
 function getProductWithId(id) {
     for (var i = 0; i < listProduct.length; i++) {
@@ -111,6 +115,7 @@ function getProductWithId(id) {
     }
     return null;
 }
+
 
 //==================== Store list item in cart ====================
 var listCart = [];
@@ -124,7 +129,9 @@ function createItemCart(item) {
                         <p class="price-product">${item["info"]["newPrice"]}.000 VNĐ</p>
                     </div>
                     <div class="quantity-product">
-                        <input id="qua-${item["info"]["id"]}" type="number" min="1" value="${item["quantity"]}">
+                        <button onClick="minusNumProduct('${item["info"]["id"]}')" class="btn-quantity">-</button>
+                        <input id="qua-${item["info"]["id"]}" type="number" min="1" value="${item["quantity"]}" readonly>
+                        <button onClick="plusNumProduct('${item["info"]["id"]}')" class="btn-quantity">+</button>
                     </div>
                     <div id="sum-${item["info"]["id"]}" class="sum-price-product">${item["sum"]}.000 VNĐ</div>
                 </div>
@@ -141,6 +148,22 @@ function createAllCart() {
     }
 }
 
+function plusNumProduct(id) {
+    const quantity = parseInt($(`#qua-${id}`).val()) + 1;
+    $(`#qua-${id}`).val(quantity);
+    updateTotal();
+}
+
+function minusNumProduct(id) {
+    const quantity = parseInt($(`#qua-${id}`).val()) - 1;
+    if (quantity < 1) {
+        removeItemOnCart(id);
+        return;
+    }
+    $(`#qua-${id}`).val(quantity);
+    updateTotal();
+}
+
 function calculateTotal() {
     var s = 0;
     for (var i = 0; i < listCart.length; i++) {
@@ -148,7 +171,7 @@ function calculateTotal() {
         listCart[i]["sum"] = temp;
         s += temp;
     }
-    console.log(s);
+    // console.log(s);
     return s;
 }
 
@@ -240,7 +263,7 @@ function loadProducts() {
     $(".nav-links, li, a").removeClass("link-active");
     $("#to-products").addClass("link-active");
     document.title = "PetShop | Sản phẩm";
-    createAllProduct();
+    createAllProduct(listProduct);
     closeBurger();
 }
 
@@ -265,7 +288,7 @@ function loadDetailProduct(id) {
     $(".nav-links, li, a").removeClass("link-active");
     $("#to-products").addClass("link-active");
     document.title = "PetShop | Sản phẩm";
-    createAllProduct();
+    // createAllProduct();
     closeBurger();
     topFunction();
 }

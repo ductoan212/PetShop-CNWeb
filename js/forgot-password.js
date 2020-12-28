@@ -7,3 +7,8 @@ function passwordRetrieval() {
     }
     location.assign("./login.html");
 }
+
+
+function backToIndex() {
+    location.assign("../index.html");
+}

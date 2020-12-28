@@ -137,6 +137,12 @@
     }
 }
 
+@media screen and (max-width:1024px) {
+    #control-product {
+        flex-direction: column;
+    }
+}
+
 @media screen and (max-width:900px) {
     .list-products {
         grid-template-columns: repeat(2, auto);

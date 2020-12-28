@@ -57,10 +57,10 @@ body {
     font-size: 20px;
 }
 
-h2 {
+#title {
     text-align: center;
-    color: var(--main-color);
-    margin: 10px 0px;
+    color: var(--main-color-dark);
+    font-weight: lighter;
 }
 
 input {

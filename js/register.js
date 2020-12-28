@@ -36,3 +36,8 @@ function redirectToIndex() {
     localStorage.setItem("isLogin", true);
     location.assign("../index.html");
 }
+
+
+function backToIndex() {
+    location.assign("../index.html");
+}

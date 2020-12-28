@@ -26,6 +26,7 @@ footer div {
     display: block;
     height: 80px;
     margin: 5px 10px;
+    cursor: pointer;
 }
 
 #ten-doan {

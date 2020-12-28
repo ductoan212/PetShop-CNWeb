@@ -57,13 +57,26 @@
     width: min-content;
     display: flex;
     align-items: center;
+    margin-right: 10px;
 }
 
 .quantity-product input {
-    width: 150px;
+    width: 80px;
+    height: 40px;
     outline: none;
     padding: 10px;
-    margin-right: 10px;
+    text-align: center;
+}
+
+.btn-quantity {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+    text-align: center;
+    border: none;
+    background-color: #2783B2;
+    color: white;
+    outline: none;
 }
 
 .sum-price-product {
@@ -96,6 +109,19 @@
     text-align: right;
 }
 
+#btn-checkout {
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+}
+
+#btn-checkout:hover {
+    background-color: var(--main-color-dark);
+}
+
 @media screen and (max-width:1024px) {
     #cart {
         margin: 15vh 1vw;
@@ -107,7 +133,7 @@
         margin: 15vh 1vw;
     }
     .quantity-product input {
-        width: 80px;
+        /* width: 80px; */
     }
 }
 
@@ -116,7 +142,7 @@
         flex-direction: column;
     }
     .quantity-product input {
-        width: 150px;
+        /* width: 150px; */
     }
 }
 
