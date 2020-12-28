@@ -26,6 +26,18 @@ body {
     align-items: center;
 }
 
+.contain-logo {
+    width: 100%;
+    /* background-color: #043f5c; */
+}
+
+.logo {
+    width: 200px;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
 .container {
     margin: auto;
     margin-top: 50px;

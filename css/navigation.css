@@ -226,3 +226,26 @@ nav {
 .toggle .line3 {
     transform: rotate(45deg) translate(-6px, -6px);
 }
+
+.btnLogin {
+    border: 1px solid var(--main-color);
+    color: var(--main-color-dark);
+    padding: 10px;
+    outline: none;
+    border-radius: 8px;
+    margin-right: 5px;
+}
+
+.btnLogin:hover {
+    border: 1px solid var(--main-color);
+    color: #ffffff;
+    background-color: var(--main-color);
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}

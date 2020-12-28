@@ -173,13 +173,17 @@ function updateTotal() {
 function checkout() {
     listCart = [];
     alert(
-        "Cảm ơn bạn đã mua hàng. Sau khi thanh toán toàn bộ sản phẩm trong giỏ hàng sã bị xóa"
+        "Cảm ơn bạn đã mua hàng. Sau khi thanh toán toàn bộ sản phẩm trong giỏ hàng sẽ bị xóa"
     );
     loadCart();
 }
 
 // ==================== add to cart ====================
 function addToCart(id) {
+    if (localStorage.getItem("isLogin") == null) {
+        alert("Đăng nhập để mua hàng");
+        return;
+    }
     console.log(id);
     const product = {
         info: getProductWithId(id),
@@ -198,6 +202,7 @@ function addToCart(id) {
     } else {
         listCart[i]["quantity"]++;
     }
+    alert("Đã thêm vào giỏ hàng");
 }
 
 function removeItemOnCart(id) {
@@ -274,6 +279,10 @@ function loadBlogs() {
 }
 
 function loadDetailBlog() {
+    if (localStorage.getItem("isLogin") == null) {
+        alert("Đăng nhập để đọc tiếp");
+        return;
+    }
     $("#main").load("../pages/detail-blog.html");
     $(".nav-links, li, a").removeClass("link-active");
     $("#to-blogs").addClass("link-active");
@@ -317,8 +326,26 @@ function loadCart() {
     ).innerHTML = `Tổng tiền: ${calculateTotal()}.000 VNĐ`;
 }
 
+function logout() {
+    localStorage.removeItem("isLogin");
+    location.assign("./index.html");
+    console.log(localStorage.getItem("isLogin"));
+}
+
+function redirecToLogin() {
+    location.assign("./pages/login.html");
+}
+
 $(document).ready(function() {
     loadHome();
+    if (localStorage.getItem("isLogin")) {
+        $("#login-true").removeClass("hidden");
+        $("#login-false").addClass("hidden");
+    } else {
+        $("#login-true").addClass("hidden");
+        $("#login-false").removeClass("hidden");
+        console.log("Chua dang nhap");
+    }
 });
 
 // ====================================== Nav ======================================
@@ -334,7 +361,7 @@ const navSlide = () => {
             if (link.style.animation) {
                 link.style.animation = "";
             } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 5}s`;
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index /10}s`;
             }
         });
         //Burger animation

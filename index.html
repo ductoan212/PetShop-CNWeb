@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PetShop</title>
     <!-- Chèn css-->
-    <link rel="icon" type="images" href="../assets/images/logo_group.png">
+    <link rel="icon" type="images" href="./assets/images/logo_group.png" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/navigation.css" />
     <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
     <!-- <script src="https://kit.fontawesome.com/yourcode.js"></script> -->
 </head>
 
@@ -27,14 +27,17 @@
             <li>
                 <form id="contain-search" onsubmit="event.preventDefault();" role="search">
                     <input id="search" type="search" placeholder="Tìm kiếm ..." autofocus required />
-                    <button id="btn-search" type="submit" onclick="clearSearch()">Tìm</button>
+                    <button id="btn-search" type="submit" onclick="clearSearch()">
+              Tìm
+            </button>
                 </form>
             </li>
             <li>
-                <a id="to-home" class="link-active" href="#" onclick="loadHome()">Trang chủ</a>
-            </li>
-            <li>
-                <a id="to-products" href="#" onclick="loadProducts()">Sản phẩm</a>
+                <a id="to-home" class="link-active" href="#" onclick="loadHome()">Trang chủ</a
+          >
+        </li>
+        <li>
+          <a id="to-products" href="#" onclick="loadProducts()">Sản phẩm</a>
             </li>
             <li>
                 <a id="to-blogs" href="#" onclick="loadBlogs()">Blog</a>
@@ -46,33 +49,33 @@
                 <a id="to-contact" href="#" onclick="loadContact()">Liên hệ</a>
             </li>
         </ul>
-        <div class="contain-menu">
+        <div id="login-true" class="contain-menu">
             <div id="account-zone">
                 <div onclick="dropdownAccount()" class="account-btn"></div>
                 <div id="accountDropdown" class="dropdown-content">
                     <a id="to-account" href="#" onclick="loadAccount()">Tài khoản</a>
                     <a id="to-cart" href="#" onclick="loadCart()">Giỏ hàng</a>
-                    <a href="./pages/login.html">Đăng xuất</a>
+                    <a href="#" onclick="logout()">Đăng xuất</a>
                 </div>
             </div>
+
             <div class="burger">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
             </div>
-        </div>
 
+        </div>
+        <div id="login-false">
+            <button class="btnLogin" onclick="redirecToLogin()">Đăng nhập</button>
+        </div>
     </nav>
 
     <!-- Main Trong mục này có thể chia làm nhiều section -->
-    <main id="main">
-
-    </main>
+    <main id="main"></main>
 
     <!-- Scroll to Top Button-->
-    <button onclick="topFunction()" id="btnToTop" title="Go to top">
-    </button>
-
+    <button onclick="topFunction()" id="btnToTop" title="Go to top"></button>
 
     <!-- footer -->
     <footer>
@@ -117,7 +120,7 @@
                         <p>0123456789</p>
                     </a>
                     <a id="footer-mail" class="flex-row hidden-link mb-5" href="#">
-                        <img class="icon-footer-small" src="./assets/icons/email.svg  " alt="Email" />
+                        <img class="icon-footer-small" src="./assets/icons/email.svg" alt="Email" />
                         <p>petshop@gm.uit.edu.vn</p>
                     </a>
                 </div>
@@ -126,16 +129,13 @@
 
         <hr id="hr-footer" />
 
-        <div class="footer2">
-            &copy; 2020 PetShop
-        </div>
+        <div class="footer2">&copy; 2020 PetShop</div>
     </footer>
 
     <!-- Chèn JS -->
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/back-to-top.js"></script>
-
 </body>
 
 </html>

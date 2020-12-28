@@ -32,23 +32,25 @@ body {
     margin-bottom: 50px;
     display: block;
     display: flex;
-    width: fit-content;
-    min-width: 900px;
+    width: max-content;
 }
 
 .img-register {
     flex-grow: 1;
     flex-shrink: 1;
     width: 50%;
+    min-width: 300px;
     background-image: url("../assets/images/register.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     border-radius: 20px 0px 0px 20px;
     padding: 50px;
 }
 
 .contain-form {
     width: 50%;
+    min-width: 500px;
     background-color: #ffffff;
     border-radius: 0px 20px 20px 0px;
     padding: 30px 50px;
@@ -173,7 +175,7 @@ hr {
     margin: 5px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     .container {
         width: fit-content;
         min-width: 200px;
@@ -190,4 +192,16 @@ hr {
         padding: 20px;
         font-size: 20px;
     }
+}
+
+.contain-logo {
+    width: 100%;
+    /* background-color: #043f5c; */
+}
+
+.logo {
+    width: 200px;
+    display: block;
+    margin: auto;
+    cursor: pointer;
 }
