@@ -2,84 +2,84 @@
 const listProduct = [{
         id: "pd-001",
         nameImg: "san_pham_1.jpg",
-        name: "Temp product 1",
+        name: "Sản phẩm 1",
         oldPrice: 120,
         newPrice: 99,
     },
     {
         id: "pd-002",
         nameImg: "san_pham_2.jpg",
-        name: "Temp product 2",
+        name: "Sản phẩm 2",
         oldPrice: 100,
         newPrice: 79,
     },
     {
         id: "pd-003",
         nameImg: "san_pham_3.jpg",
-        name: "Temp product 3",
+        name: "Sản phẩm 3",
         oldPrice: 1220,
         newPrice: 700,
     },
     {
         id: "pd-004",
         nameImg: "san_pham_4.jpg",
-        name: "Temp product 4",
+        name: "Sản phẩm 4",
         oldPrice: 20,
         newPrice: 9,
     },
     {
         id: "pd-005",
         nameImg: "san_pham_5.jpg",
-        name: "Temp product 5",
+        name: "Sản phẩm 5",
         oldPrice: 20,
         newPrice: 15,
     },
     {
         id: "pd-006",
         nameImg: "san_pham_6.jpg",
-        name: "Temp product 6",
+        name: "Sản phẩm 6",
         oldPrice: 120,
         newPrice: 99,
     },
     {
         id: "pd-007",
         nameImg: "san_pham_1.jpg",
-        name: "Temp product 7",
+        name: "Sản phẩm 7",
         oldPrice: 55,
         newPrice: 23,
     },
     {
         id: "pd-008",
         nameImg: "san_pham_2.jpg",
-        name: "Temp product 8",
+        name: "Sản phẩm 8",
         oldPrice: 212,
         newPrice: 199,
     },
     {
         id: "pd-009",
         nameImg: "san_pham_3.jpg",
-        name: "Temp product 9",
+        name: "Sản phẩm 9",
         oldPrice: 100,
         newPrice: 99,
     },
     {
         id: "pd-010",
         nameImg: "san_pham_4.jpg",
-        name: "Temp product 10",
+        name: "Sản phẩm 10",
         oldPrice: 88,
         newPrice: 75,
     },
     {
         id: "pd-011",
         nameImg: "san_pham_5.jpg",
-        name: "Temp product 11",
+        name: "Sản phẩm 11",
         oldPrice: 75,
         newPrice: 23,
     },
     {
         id: "pd-012",
         nameImg: "san_pham_6.jpg",
-        name: "Temp product 12",
+        name: "Sản phẩm 12",
         oldPrice: 45,
         newPrice: 40,
     },
@@ -331,8 +331,10 @@ function loadContact() {
 }
 
 function loadAccount() {
+    // $("#main").load("../pages/loading.html");
     $("#main").load("../pages/account.html");
     $(".nav-links, li, a").removeClass("link-active");
+
     document.title = "PetShop | Tài khoản";
 }
 
