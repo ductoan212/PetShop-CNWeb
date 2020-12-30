@@ -315,7 +315,7 @@ function loadDetailBlog() {
 }
 
 function loadAboutUs() {
-    $("#main").load("../pages/about-us.html");
+    $("#main").load("./pages/about-us.html");
     $(".nav-links, li, a").removeClass("link-active");
     $("#to-about-us").addClass("link-active");
     document.title = "PetShop | Giới thiệu";
@@ -331,7 +331,6 @@ function loadContact() {
 }
 
 function loadAccount() {
-    // $("#main").load("../pages/loading.html");
     $("#main").load("../pages/account.html");
     $(".nav-links, li, a").removeClass("link-active");
 
