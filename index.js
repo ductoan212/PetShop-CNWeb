@@ -8,6 +8,8 @@ app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '/src/index.html'))
 );
 
-app.listen(3000, () => {
-  console.log('App is running in: http://localhost:3000/');
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`App is running on port ${PORT}`);
 });
