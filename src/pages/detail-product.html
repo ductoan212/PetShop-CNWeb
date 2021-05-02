@@ -1,0 +1,144 @@
+<link rel="stylesheet" href="../css/detail-product.css" />
+<link rel="stylesheet" href="../css/products.css" />
+<section id="detail-product">
+    <header>Chi tiết sản phẩm</header>
+    <div>
+        <div id="img-product"></div>
+        <div id="info-product">
+            <div>
+                <p id="name-product">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <div id="validate-product">
+                    <p>Đánh giá: 8/10</p>|
+                    <p>999 Đánh giá</p>|
+                    <p>999 Đã bán</p>
+                </div>
+                <div id="price-product">
+                    <p id="title-price">Giá:</p>
+                    <p id="old-price">120.000 VNĐ</p>
+                    <p id="new-price">99.000 VNĐ</p>
+                </div>
+            </div>
+            <div id="add-product-to-cart">
+                <!-- <div>
+                    <label>Nhập số lượng:</label>
+                    <input type="number" min="1">
+                </div> -->
+                <button id="btn-add-to-cart">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="descript-product">
+    <header>Mô tả sản phẩm</header>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi unde aut neque architecto veniam dolorum adipisci ipsam quae, repudiandae quod suscipit officiis dolore corporis nesciunt! Rem dolor voluptates mollitia sunt? Lorem ipsum, dolor sit
+        amet consectetur adipisicing elit. Ullam hic ratione provident fugiat magni eius sequi facere exercitationem eveniet. Asperiores autem incidunt odit expedita qui! Alias et nulla incidunt quaerat? Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Ut voluptatum veniam libero fuga sed facilis sint aliquam sit atque, rem consequatur molestias asperiores maxime earum ab illo animi labore pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. In laborum exercitationem aperiam
+        animi nostrum vero illo placeat quas, sit harum pariatur temporibus, asperiores quisquam omnis modi mollitia maiores, ipsum repudiandae. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam possimus nam, ad animi praesentium aut
+        placeat voluptate laboriosam assumenda, ex fugiat quidem corrupti ut aliquid quo porro voluptatem, incidunt velit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos quasi repudiandae, reiciendis tempora aliquam enim culpa,
+        corrupti minima consectetur porro deserunt. Voluptatum modi a cupiditate aspernatur tempora quod veniam vero!
+    </p>
+</section>
+<section id="other-products">
+    <header>Các sản phẩm khác</header>
+    <!-- <div id="lst-product" class="list-products">
+        <div class="product-item" id="pd-001" onclick="detailProduct('pd-001')">
+            <div class="img-product" style="background-image:  url(../assets/images/san_pham_1.jpg);"></div>
+            <div class="info-product">
+                <p class="name-product">Temp product 1</p>
+                <p class="old-price-product">120.000 VNĐ</p>
+                <p class="new-price-product">99.000 VNĐ</p>
+            </div>
+            <div class="add-to-cart">
+                <button>Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-item" id="pd-002" onclick="detailProduct('pd-002')">
+            <div class="img-product" style="background-image:  url(../assets/images/san_pham_2.jpg);"></div>
+            <div class="info-product">
+                <p class="name-product">Temp product 2</p>
+                <p class="old-price-product">100.000 VNĐ</p>
+                <p class="new-price-product">79.000 VNĐ</p>
+            </div>
+            <div class="add-to-cart">
+                <button>Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-item" id="pd-003" onclick="detailProduct('pd-003')">
+            <div class="img-product" style="background-image:  url(../assets/images/san_pham_3.jpg);"></div>
+            <div class="info-product">
+                <p class="name-product">Temp product 3</p>
+                <p class="old-price-product">1220.000 VNĐ</p>
+                <p class="new-price-product">700.000 VNĐ</p>
+            </div>
+            <div class="add-to-cart">
+                <button>Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-item" id="pd-004" onclick="detailProduct('pd-004')">
+            <div class="img-product" style="background-image:  url(../assets/images/san_pham_4.jpg);"></div>
+            <div class="info-product">
+                <p class="name-product">Temp product 4</p>
+                <p class="old-price-product">20.000 VNĐ</p>
+                <p class="new-price-product">9.000 VNĐ</p>
+            </div>
+            <div class="add-to-cart">
+                <button>Thêm vào giỏ</button>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="lst-product" class="list-products">
+        <div class="product-item" id="pd-001">
+            <div onclick="detailProduct('pd-001')">
+                <div class="img-product" style="background-image:  url(../assets/images/san_pham_1.jpg);"></div>
+                <div class="info-product">
+                    <p class="name-product">Temp product 1</p>
+                    <p class="old-price-product">120.000 VNĐ</p>
+                    <p class="new-price-product">99.000 VNĐ</p>
+                </div>
+            </div>
+            <div class="add-to-cart">
+                <button id="btn-pd-001" onclick="addToCart('pd-001')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-item" id="pd-003">
+            <div onclick="detailProduct('pd-003')">
+                <div class="img-product" style="background-image:  url(../assets/images/san_pham_3.jpg);"></div>
+                <div class="info-product">
+                    <p class="name-product">Temp product 3</p>
+                    <p class="old-price-product">1220.000 VNĐ</p>
+                    <p class="new-price-product">700.000 VNĐ</p>
+                </div>
+            </div>
+            <div class="add-to-cart">
+                <button id="btn-pd-003" onclick="addToCart('pd-003')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-item" id="pd-010">
+            <div onclick="detailProduct('pd-010')">
+                <div class="img-product" style="background-image:  url(../assets/images/san_pham_4.jpg);"></div>
+                <div class="info-product">
+                    <p class="name-product">Temp product 10</p>
+                    <p class="old-price-product">88.000 VNĐ</p>
+                    <p class="new-price-product">75.000 VNĐ</p>
+                </div>
+            </div>
+            <div class="add-to-cart">
+                <button id="btn-pd-010" onclick="addToCart('pd-010')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-item" id="pd-012">
+            <div onclick="detailProduct('pd-012')">
+                <div class="img-product" style="background-image:  url(../assets/images/san_pham_6.jpg);"></div>
+                <div class="info-product">
+                    <p class="name-product">Temp product 12</p>
+                    <p class="old-price-product">45.000 VNĐ</p>
+                    <p class="new-price-product">40.000 VNĐ</p>
+                </div>
+            </div>
+            <div class="add-to-cart">
+                <button id="btn-pd-012" onclick="addToCart('pd-012')">Thêm vào giỏ</button>
+            </div>
+        </div>
+    </div>
+</section>

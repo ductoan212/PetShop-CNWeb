@@ -1,0 +1,23 @@
+{
+  "name": "petshop-cnweb",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ductoan212/PetShop-CNWeb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ductoan212/PetShop-CNWeb/issues"
+  },
+  "homepage": "https://github.com/ductoan212/PetShop-CNWeb#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
